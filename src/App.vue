@@ -1,7 +1,18 @@
-<script setup></script>
+<script>
+import { defineAsyncComponent } from 'vue'
+export default {
+  components: {
+    Navbar: defineAsyncComponent(() =>
+      import('./modules/dashboard/components/NavBar.vue')
+    ),
+  },
+  setup() {},
+}
+</script>
 
 <template>
   <h1>Weather App</h1>
+  <Navbar />
 </template>
 
 <style>
